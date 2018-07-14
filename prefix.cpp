@@ -1,3 +1,10 @@
+/*
+    The program simply implements the part of the
+    KMP algorithm that preprocesses the pattern string
+    since it does exactly what the problem asks.
+    Time complexity O( n ).
+    Reference: none
+ */
 #include <vector>
 #include <iostream>
 #include <string>

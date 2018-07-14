@@ -1,3 +1,9 @@
+/*
+    The program scans the input and tries to match
+    each character of the string "hello" starting from
+    the 'h' character. Time complexity O( n ).
+    Reference: none.
+ */
 #include <iostream>
 #include <string>
 #include <vector>

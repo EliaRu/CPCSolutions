@@ -1,3 +1,19 @@
+/*
+    For each tree the program checks if it can be
+    placed to the left by comparing the last position
+    occupied by the previous tree and its height.
+    If this cannot be done it checks if the tree can
+    be place to the right in a similar way.
+    The first tree can alway be placed to its left.
+    This works since by choosing the left segment over
+    the right one we have more chances to cut also the
+    next tree. Also if we prevent a tree to be cut
+    by cutting the previous one this won't affect the
+    final number of trees that can be cut.
+    Then the program scans once the array so it takes
+    O( n ) time.
+    Reference:none
+ */
 #include <vector>
 #include <iostream>
 

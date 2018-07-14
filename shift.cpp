@@ -1,3 +1,19 @@
+/*
+    The program uses a variant of the KMP algorithm.
+    The difference is that it keeps also the longest
+    match that it got and where it starts.
+    Than the algorithm is used on the string B@B with
+    A as the pattern. B@B is used instead of only B
+    because with the latter we wouldn't catch a match
+    that starts at the end of the string and ends at the
+    start of that.
+    The result, the number of shifts, its the position
+    of the first occurrence of the longest match found
+    in this way.
+    The time complexity of this program is the time
+    complexity of the KMP algorithm O( m + n ).
+    Reference: none
+ */
 #include <vector>
 #include <iostream>
 #include <string>

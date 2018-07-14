@@ -1,3 +1,25 @@
+/*
+    The solution is very similar to the "Subset Sum" in
+    the lecture notes. 
+    First the program computes the sum of the element
+    in the set. If the sum is not divisible by 2 is 
+    impossible to divide the set into two such that
+    the sum of each is the same. If the sum is zero,
+    since all the elements are greater or equal to 
+    zero, they must be all equal to zero and is 
+    possible to make up to subset with sum equal to
+    zero.
+    If the sum is divisible by zero the problem
+    is resolved with the same recurrence equation
+    used for the Subset Sum problem of the notes.
+    The only difference is the final value, that must 
+    be half of the whole sum and the starting conditions.
+    In fact we cannot choose the empty set or the
+    whole set as a valid solution to the problem.
+    The program must fill the whole table so it runs
+    in O( n * sum ) time and takes O( n * sum ) space.
+    Reference: none
+ */
 #include <vector>
 #include <iostream>
 #include <cstring>

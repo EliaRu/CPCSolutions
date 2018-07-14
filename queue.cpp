@@ -1,3 +1,20 @@
+/*
+    First the program sorts the input array in descending order of
+    the number of people taller than a given person in front
+    of him. Then it check if for each person there are enough
+    people in front of him to satisfy his claim. If there are not
+    a valid queue does not exist. If there are this is a valid
+    queue.
+    Finally the program assign heights ranging from 1 to n.
+    Starting from the first person at each person it is assigned
+    the height that has exactly i heights after it that are not
+    already assigned, where i is the number of people taller than
+    the current person in front of him in the waiting line.
+    The last part consist of scanning the entire array to assign
+    just one height in the worst case so the program takes
+    O( n^2 ) time.
+    Reference: none
+ */
 #include <vector>
 #include <iostream>
 #include <algorithm>

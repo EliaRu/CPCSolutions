@@ -1,3 +1,29 @@
+/*
+    The solution is divided into two parts: first it transform
+    queries on a tree into queries on an array. Then it uses
+    the Mo's algorithm to answer the queries efficiently.
+    The first part  is done by a DFS that stores in the preordervisit
+    array the tag of the nodes in the order that they are found
+    for the first time and uses the time variable to compute
+    the first and last position of its subtree in the array.
+    The second part is done by substituting in the queries
+    the node with the corrisponding positions computed by the DFS.
+    Then these are ordered with respect to the Mo's algorithm
+    criteria and answered one by one.
+    To implement the add and remove operations the array counters
+    and noEachColor are used. The latter contains at position i
+    how many nodes in the range have color i, the former contains
+    at position j how many colors have at least j nodes.
+    When we add a node the number of nodes for that color is 
+    incremented and the number of colors that have at least
+    noEachColor[currentColor] is also incremented.
+    When we remove a node first we decrement the number of color
+    that has at least noEachColor[currentColor] then we decrement
+    the number of nodes for the currentColor.
+    The more expensive operation is Mo's algorithm so the program
+    runs in O( ( n + q )sqrt( n ) ) time.
+    Reference: Tutorial on Codeforces.
+ */
 #include <vector>
 #include <iostream>
 #include <cmath>
